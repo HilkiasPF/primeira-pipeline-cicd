@@ -1,0 +1,13 @@
+name: cicd
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: obtendo código
+        uses: actions/checkout@v4.1.5
+      - name: autenticação no docker hub
+        
